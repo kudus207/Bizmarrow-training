@@ -1,0 +1,10 @@
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+*.sqlite3
+.tmp.driveupload
+.vscode/
+media/
+staticfiles/
+.env

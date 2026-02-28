@@ -1,0 +1,41 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #557086;
+  color: #333;
+  margin-top: 150px;
+}
+
+section {
+  background-color: rgb(242, 245, 248);
+  width: 1000px;
+  border: 1px solid #ccc;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* 💡 Arrange icons in a row and make them equal size */
+.icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* allows them to go to a new line if screen is small */
+  gap: 20px; /* space between icons */
+  margin-top: 30px;
+}
+
+/* same size for all icons */
+.icons img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain; /* keeps the shape proportional */
+  transition: transform 0.3s ease;
+}
+
+/* optional hover effect */
+.icons img:hover {
+  transform: scale(1.2);
+}

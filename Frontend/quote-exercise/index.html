@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: aquamarine;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #heading {
+            text-align: center;
+            color: #333;
+        }
+
+        #quotes,
+        .quotes {
+            font-size: 1.2em;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        #quoteAuthor {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            opacity: 0.7;
+        }
+
+        .quotes {
+            font-weight: bold;
+        }
+
+        .buttons-div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading">Inspirational Quote Generator</h1>
+        <p id="quoteText"></p>
+        <p id="quoteAuthor"></p>
+        <div class="buttons-div">
+            <button id="previous">Previous</button>
+            <button id="next">Next</button>
+        </div>
+        <p class="quotes">Share this Quote</p>
+    </div>
+</body>
+<script>
+    const quotes = [
+        { text: "The best way to get started is to quit talking and begin doing.", author: "Walt Disney" },
+        { text: "Don’t let yesterday take up too much of today.", author: "Will Rogers" },
+        { text: "It’s not whether you get knocked down, it’s whether you get up.", author: "Vince Lombardi" },
+        { text: "If you are working on something exciting, it will keep you motivated.", author: "Steve Jobs" },
+        { text: "Success is not in what you have, but who you are.", author: "Bo Bennett" },
+        { text: "In the middle of every difficulty lies opportunity.", author: "Albert Einstein" },
+        { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+        { text: "Believe you can and you're halfway there.", author: "Theodore Roosevelt" },
+        { text: "Hardships often prepare ordinary people for an extraordinary destiny.", author: "C.S. Lewis" },
+        { text: "Your time is limited, so don't waste it living someone else's life.", author: "Steve Jobs" },
+        { text: "Strive not to be a success, but rather to be of value.", author: "Albert Einstein" },
+        { text: "Dream big and dare to fail.", author: "Norman Vaughan" }
+    ];
+
+    let currentIndex = 0;
+
+    function showQuote(index) {
+        const quote = quotes[index];
+        document.getElementById("quoteText").textContent = `"${quote.text}"`;
+        document.getElementById("quoteAuthor").textContent = `- ${quote.author}`;
+    }
+
+    document.getElementById("previous").addEventListener("click", function () {
+        currentIndex = (currentIndex - 1 + quotes.length) % quotes.length;
+        showQuote(currentIndex);
+    });
+
+    document.getElementById("next").addEventListener("click", function () {
+        currentIndex = (currentIndex + 1) % quotes.length;
+        showQuote(currentIndex);
+    });
+
+    showQuote(currentIndex);
+
+</script>
+
+</html>

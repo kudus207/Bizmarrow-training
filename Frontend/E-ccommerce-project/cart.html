@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+  <!-- 🧭 Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">sneakers</div>
+    <a href="index.html" class="back-link">← Continue Shopping</a>
+  </header>
+
+  <!-- 🛒 Main Cart Section -->
+  <main class="cart-page">
+    <h1>Your Shopping Cart</h1>
+
+    <!-- Container for dynamically loaded cart items -->
+    <div id="cartItems"></div>
+
+    <!-- Total price section -->
+    <div class="cart-total">
+      <h2>Total: $<span id="cartTotal">0.00</span></h2>
+    </div>
+  </main>
+
+  <!-- 📜 Script to manage cart functionality -->
+  <script src="cart.js"></script>
+
+</body>
+</html>

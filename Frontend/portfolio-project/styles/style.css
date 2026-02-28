@@ -1,0 +1,77 @@
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #9dafbe;
+    color: #333;
+    margin-top: 150px;
+}
+
+.container {
+    background-color: aliceblue;
+    width: 1000px;
+    border: 1px solid #ccc;
+    padding: 40px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.port-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-name {
+    color: rgb(60, 60, 208);
+}
+
+a {
+    text-decoration: none;
+}
+/*
+
+.page-name {
+    margin-right: 70px;
+}
+
+.about-page {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.hire {
+    background-color: rgb(60, 60, 208);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.cv {
+    background-color: rgb(219, 227, 229);
+    color: rgb(60, 60, 208);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.Education-section, .skill-section, .contact-info {
+    margin-top: 100px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+ */   

@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #557086;
+    color: #333;
+    margin-top: 150px;
+}
+
+section {
+    background-color: rgb(242, 245, 248);
+    width: 1000px;
+    border: 1px solid #ccc;
+    padding: 40px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+p {
+  line-height: 1.8; 
+}

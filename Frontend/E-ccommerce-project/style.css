@@ -1,0 +1,231 @@
+/* =========================
+   GLOBAL STYLES AND RESETS
+   ========================= */
+* {
+  margin: 0; /* Removes default browser margin */
+  padding: 0; /* Removes default browser padding */
+  box-sizing: border-box; /* Ensures padding/border don't affect element width */
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif; /* Main font style */
+  background-color: #fff; /* White background */
+  color: hsl(219, 9%, 45%); /* Text color */
+  line-height: 1.6; /* Improves readability */
+}
+
+/* =========================
+   NAVIGATION BAR STYLES
+   ========================= */
+.navbar {
+  display: flex; /* Aligns elements horizontally */
+  justify-content: space-between; /* Spaces elements across the width */
+  align-items: center; /* Vertically centers items */
+  padding: 1.5rem 5%; /* Adds spacing inside navbar */
+  border-bottom: 1px solid hsl(220, 14%, 90%); /* Bottom border line */
+}
+
+.navbar .logo {
+  font-weight: 700; /* Bold logo text */
+  font-size: 1.5rem; /* Larger font for logo */
+}
+
+.navbar nav a {
+  margin: 0 1rem; /* Space between navigation links */
+  color: hsl(219, 9%, 45%); /* Link color */
+  text-decoration: none; /* Removes underline */
+}
+
+.navbar .icons {
+  display: flex; /* Displays icons in a row */
+  align-items: center; /* Centers icons vertically */
+  gap: 1.5rem; /* Space between icons */
+}
+
+.avatar {
+  width: 40px; /* Size of user avatar */
+  border-radius: 50%; /* Makes it circular */
+}
+
+.cart-container {
+  position: relative; /* Allows badge positioning */
+}
+
+#cartCount {
+  position: absolute; /* Positions cart count relative to icon */
+  top: -5px; /* Moves upward */
+  right: -10px; /* Moves to right */
+  background: hsl(26, 100%, 55%); /* Orange background */
+  color: white; /* White text color */
+  font-size: 0.7rem; /* Small font size */
+  font-weight: 700; /* Bold count number */
+  border-radius: 50%; /* Circular badge */
+  width: 18px; /* Badge size */
+  height: 18px;
+  display: flex; /* Centers text inside badge */
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   PRODUCT SECTION STYLES
+   ========================= */
+.product {
+  display: flex; /* Aligns image and info side by side */
+  justify-content: center; /* Centers items horizontally */
+  align-items: start; /* Aligns items at the top */
+  gap: 5rem; /* Space between gallery and info */
+  padding: 4rem 8%; /* Adds space around content */
+  border: 1px solid rgb(190, 62, 62); /* Temporary border for debugging */
+}
+
+.product-gallery {
+  flex: 1; /* Takes equal width with info */
+}
+
+.main-image img {
+  width: 100%; /* Image takes full container width */
+  border-radius: 15px; /* Rounded corners */
+}
+
+.thumbnails {
+  display: flex; /* Displays thumbnails in a row */
+  justify-content: space-between; /* Evenly distributes images */
+  margin-top: 1.5rem; /* Adds space above thumbnails */
+}
+
+.thumbnails img {
+  width: 22%; /* Makes 4 images fit in one row */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  opacity: 0.7; /* Slightly transparent by default */
+}
+
+.thumbnails img.active,
+.thumbnails img:hover {
+  border: 2px solid hsl(26, 100%, 55%); /* Orange border when active or hovered */
+  opacity: 1; /* Fully visible */
+}
+
+.product-info {
+  flex: 1; /* Takes remaining space beside gallery */
+  max-width: 400px; /* Restricts width of text */
+}
+
+.company {
+  color: hsl(26, 100%, 55%); /* Orange color for brand */
+  letter-spacing: 2px; /* Spaced out letters */
+  font-size: 0.8rem; /* Small uppercase text */
+  font-weight: 700;
+  margin-bottom: 1rem; /* Space below */
+}
+
+h1 {
+  color: hsl(220, 13%, 13%); /* Dark text color */
+  font-size: 2rem; /* Main heading size */
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.9rem; /* Slightly smaller text */
+  margin-bottom: 1.5rem; /* Adds space below */
+}
+
+.price {
+  display: flex;
+  flex-direction: column; /* Stacks price and discount vertically */
+  gap: 0.3rem; /* Small gap between them */
+  margin-bottom: 1.5rem;
+}
+
+.current {
+  display: flex; /* Aligns price and discount side by side */
+  align-items: center;
+  gap: 1rem; /* Space between them */
+}
+
+.current h2 {
+  color: hsl(220, 13%, 13%); /* Price color */
+}
+
+.discount {
+  background: hsl(25, 100%, 94%); /* Light orange background */
+  color: hsl(26, 100%, 55%); /* Orange text color */
+  padding: 0.2rem 0.5rem; /* Adds padding */
+  border-radius: 5px; /* Rounded corners */
+  font-weight: 700; /* Bold discount */
+}
+
+.old-price {
+  text-decoration: line-through; /* Crosses out old price */
+  color: hsl(220, 14%, 75%); /* Faded color */
+}
+
+/* =========================
+   CART AND QUANTITY CONTROLS
+   ========================= */
+.cart-controls {
+  display: flex; /* Aligns quantity and button horizontally */
+  gap: 1rem; /* Space between them */
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: hsl(223, 64%, 98%); /* Light gray background */
+  border-radius: 10px; /* Rounded container */
+  width: 120px; /* Fixed width */
+  padding: 0.5rem; /* Inner padding */
+}
+
+.quantity button {
+  background: none; /* No background for + and - */
+  border: none; /* Removes border */
+  font-size: 1.2rem; /* Slightly large text */
+  color: hsl(26, 100%, 55%); /* Orange color */
+  cursor: pointer; /* Pointer cursor */
+  font-weight: 700;
+}
+
+.add-cart {
+  background: hsl(26, 100%, 55%); /* Orange background */
+  color: #fff; /* White text */
+  border: none; /* No border */
+  flex: 1; /* Expands to fill available space */
+  border-radius: 10px; /* Rounded button */
+  font-weight: 700;
+  display: flex; /* Centers text and icon */
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Space between icon and text */
+  cursor: pointer; /* Pointer cursor */
+  transition: 0.3s; /* Smooth hover transition */
+}
+
+.add-cart:hover {
+  background: hsl(26, 100%, 65%); /* Slightly lighter orange on hover */
+}
+
+.button-cart {
+  width: 20px; /* Size of cart icon inside button */
+}
+
+/* =========================
+   RESPONSIVE DESIGN (MOBILE)
+   ========================= */
+@media (max-width: 768px) {
+  .product {
+    flex-direction: column; /* Stacks image and info vertically */
+    gap: 2rem; /* Reduces space between sections */
+    padding: 2rem; /* Less padding on small screens */
+  }
+
+  .main-image img {
+    border-radius: 0; /* Removes rounded corners for mobile view */
+  }
+
+  .thumbnails {
+    gap: 0.5rem; /* Smaller gap between thumbnails */
+  }
+}

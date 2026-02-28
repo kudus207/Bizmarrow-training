@@ -1,0 +1,141 @@
+/* 🛒 MAIN CART PAGE LAYOUT */
+.cart-page {
+  max-width: 700px;           /* Keeps cart content centered and readable */
+  margin: 2rem auto;          /* Centers cart vertically and horizontally */
+  padding: 1rem;              /* Adds inner spacing */
+}
+
+/* 🧾 INDIVIDUAL CART ITEM CONTAINER */
+.cart-item {
+  display: flex;              /* Aligns product image, info, and button in a row */
+  align-items: center;        /* Vertically centers everything */
+  justify-content: space-between; /* Spaces items evenly */
+  margin-bottom: 1rem;        /* Adds space between cart items */
+  padding: 1rem;              /* Adds padding inside each item */
+  border-bottom: 1px solid #ddd; /* Light divider between items */
+}
+
+/* 🖼️ PRODUCT IMAGE */
+.cart-item img {
+  width: 80px;                /* Consistent image size */
+  border-radius: 10px;        /* Soft rounded corners */
+}
+
+/* 🧩 PRODUCT INFO SECTION (title, price, qty) */
+.cart-item-info {
+  flex: 1;                    /* Takes up available space */
+  margin-left: 1rem;          /* Space between image and text */
+}
+
+/* 🔢 QUANTITY CONTROLS ( + / − buttons with count ) */
+.quantity-controls {
+  display: flex;              /* Align controls horizontally */
+  align-items: center;        /* Vertically center the items */
+  gap: 0.6rem;                /* Small spacing between buttons and quantity */
+  margin-top: 0.5rem;         /* Space above the controls */
+}
+
+/* ➕➖ BUTTONS FOR QUANTITY CONTROL */
+.quantity-controls button {
+  background: hsl(26, 100%, 55%); /* Orange brand color */
+  color: #fff;                     /* White icon/text */
+  border: none;                    /* No borders */
+  width: 28px;                     /* Square button */
+  height: 28px;
+  border-radius: 5px;              /* Slightly rounded corners */
+  font-size: 1rem;                 /* Comfortable button size */
+  font-weight: bold;
+  cursor: pointer;                 /* Pointer cursor on hover */
+  transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+/* 🟧 Hover effect for quantity buttons */
+.quantity-controls button:hover {
+  background: hsl(26, 100%, 65%);
+}
+
+/* 🔢 The number showing current quantity */
+.quantity-controls span {
+  font-weight: 600;                /* Make number stand out */
+  min-width: 20px;                 /* Keeps alignment stable */
+  text-align: center;
+  color: hsl(220, 13%, 13%);       /* Dark gray text color */
+}
+
+/* ❌ REMOVE BUTTON STYLING */
+.remove-btn {
+  background: hsl(26, 100%, 55%);  /* Orange theme color */
+  border: none;
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Smooth hover transition */
+}
+
+/* 🟧 Hover state for remove button */
+.remove-btn:hover {
+  background: hsl(26, 100%, 65%);
+}
+
+/* 💰 CART TOTAL SECTION */
+.cart-total {
+  text-align: right;              /* Align total to the right side */
+  font-size: 1.2rem;              /* Slightly larger text */
+  font-weight: 700;               /* Bold for emphasis */
+  margin-top: 2rem;               /* Space above total section */
+}
+
+/* 📱 RESPONSIVE DESIGN FOR SMALL SCREENS */
+@media (max-width: 768px) {
+  .cart-page {
+    padding: 1rem;               /* Slightly reduce padding */
+  }
+
+  .cart-item {
+    flex-direction: column;      /* Stack image, info, and buttons vertically */
+    align-items: flex-start;     /* Align all elements to the left */
+  }
+
+  .cart-item img {
+    width: 100%;                 /* Make image full width for mobile */
+    max-width: 250px;            /* Limit how big it can get */
+    margin-bottom: 0.8rem;       /* Add space below the image */
+  }
+
+  .cart-item-info {
+    margin-left: 0;              /* Remove left margin (since items stack) */
+    width: 100%;                 /* Full width for text */
+  }
+
+  .quantity-controls {
+    justify-content: flex-start; /* Align controls to left */
+    margin-top: 0.8rem;
+  }
+
+  .remove-btn {
+    margin-top: 0.8rem;          /* Add space between remove button and qty */
+  }
+
+  .cart-total {
+    text-align: center;          /* Center total on mobile */
+    font-size: 1.1rem;           /* Slightly smaller for mobile fit */
+  }
+}
+
+/* 📱 EVEN SMALLER SCREENS (phones < 480px) */
+@media (max-width: 480px) {
+  .cart-item img {
+    max-width: 200px;            /* Reduce image size a bit */
+  }
+
+  .quantity-controls button {
+    width: 26px;                 /* Slightly smaller buttons */
+    height: 26px;
+  }
+
+  .remove-btn {
+    width: 100%;                 /* Make remove button span full width */
+    text-align: center;
+  }
+}

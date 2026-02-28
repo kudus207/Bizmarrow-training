@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: #08cb97;
+    margin: 0;
+    height: 100vh;
+}
+
+.main-container {
+    background-color: rgb(2, 29, 42);
+    width: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.player {
+    margin: 10px 10px;
+}
+
+#dice1, #dice2 {
+    width: 140px;
+    border: none;
+    border-radius: 30px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+
+button {
+  padding: 17px 20px;
+  font-size: 26px;
+  border: none;
+  border-radius: 10px;
+  background-color: #08cb97;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: black;
+}
+
+
+
