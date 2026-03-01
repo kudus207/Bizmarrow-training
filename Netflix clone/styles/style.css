@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.right-header {
+  width: 120px;
+}
+
+.left-header {
+  background-color: red;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.left-header a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.background-image {
+  background-image: url("/html_practice/Netflix clone/images/background2.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.section1 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 18px;
+}
+
+.section1 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+}
+
+.section1 p {
+  font-size: 1rem;
+  margin-bottom: 18px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.email {
+  width: 280px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  padding: 0 15px;
+  font-size: 16px;
+}
+
+.get-started {
+  width: 150px;
+  height: 50px;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.section2 {
+  padding: 50px 20px;
+}
+
+.section2-join {
+  margin-bottom: 20px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.container {
+  background: #111;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 200px;
+}
+
+.section3 {
+  padding: 70px 20px;
+}
+
+.section3 p{
+  margin-bottom: 20px;
+}
+
+.second-container details {
+  background: #111;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.second-container summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.section3-div {
+  margin-top: 40px;
+  text-align: center;
+}
+
+footer {
+  padding: 40px 20px;
+  background-color: black;
+  color: gray;
+}
+
+footer div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: gray;
+  font-size: 14px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer button {
+  background-color: black;
+  color: white;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+}
