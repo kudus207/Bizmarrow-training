@@ -1,0 +1,20 @@
+.title, .nav, .footer {
+    border: 1px,solid;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    border: 1px, solid;
+}
+
+.left {
+    width: 30%;
+    border: 1px, solid;
+}
+
+.right {
+    width: 70%;
+    border: 1px, solid;
+}
